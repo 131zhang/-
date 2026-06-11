@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收支统计</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f7ff;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        .card {
+            border-radius: 12px;
+            border: 1px solid #c9e0f8;
+            box-shadow: 0 2px 8px rgba(30, 100, 200, 0.08);
+            background: #ffffff;
+        }
+        .alert {
+            border-radius: 10px;
+            border: none;
+            background-color: #e6f0fc;
+            color: #235796;
+        }
+        .btn {
+            border-radius: 8px;
+        }
+        .btn-secondary, .btn-outline-secondary {
+            background-color: #4088d8;
+            color: #fff;
+            border-color: #4088d8;
+        }
+        .btn-outline-secondary:hover {
+            background-color: #2e75c2;
+            color: #fff;
+        }
+        .text-secondary {
+            color: #235796 !important;
+        }
+    </style>
+</head>
+<body class="container py-4">
+    <h2 class="text-center text-secondary mb-4">收支总统计</h2>
+
+    <div class="alert text-center py-3">
+        {{mood}}
+    </div>
+
+    <div class="card p-5 text-center mx-auto" style="max-width: 600px;">
+        <div class="mb-4">
+            <p class="text-muted mb-1">总收入</p>
+            <h3 class="text-dark">{{income}} 元</h3>
+        </div>
+        <div class="mb-4">
+            <p class="text-muted mb-1">总支出</p>
+            <h3 class="text-dark">{{expend}} 元</h3>
+        </div>
+        <div class="pt-4 border-top">
+            <p class="text-muted mb-1">当前结余</p>
+            <h3 class="text-dark">{{income - expend}} 元</h3>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="/" class="btn btn-outline-secondary">返回首页</a>
+        <a href="/pie" target="_blank" class="btn btn-outline-secondary">查看分类饼图</a>
+    </div>
+
+</body>
+</html>
